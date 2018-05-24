@@ -8,12 +8,13 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 const apiRouter = require('./api/api');
-app.use('/api', apiRouter);
 
 //  Body parsing middleware
 app.use(bodyParser.json());
-
 app.use(cors());
+
+app.use('/api', apiRouter);
+
 
 app.use(errorhandler());
 
