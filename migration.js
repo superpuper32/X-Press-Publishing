@@ -27,6 +27,6 @@ db.serialize(() => {
   '`artist_id` INTEGER NOT NULL, ' +
   '`series_id` INTEGER NOT NULL, ' +
   'PRIMARY KEY(`id`), ' +
-  'FOREIGN KEY(`series_id`) REFERENCES `Series`(`id`)' +
+  'FOREIGN KEY(`artist_id`) REFERENCES `Artist`(`id`)' +
   'FOREIGN KEY(`series_id`) REFERENCES `Series`(`id`) )');
 });
